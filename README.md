@@ -4,6 +4,17 @@ A Raspberry Pi project for setting up a Plex server.
 ## Getting Started
 Some text.
 
+### Useful Commands
+| Command | Description |
+| --- | --- |
+| `sudo blkid` | Allows you to display information about available block devices, useful for getting information about your external hard drive. |
+| `sudo chown -R myuser:mygroup /path` | Change ownership recursively. |
+| `sudo echo "/dev/sda2 /mnt/external  errors=remount-ro 0 1" >> /etc/fstab` | Unsure about what this one is yet, but I think it's to mount the external hard drive on boot. |
+| `sudo fdisk -l` | Lists all partitions |
+| `sudo fdisk /path` | Launch fdisk for the specified path. |
+| https://phoenixnap.com/kb/delete-partition-linux | How to delete a partition in Linux. |
+| https://phoenixnap.com/kb/linux-format-disk | How to format a disk in Linux. |
+
 ### Compatible Devices
 - Raspberry Pi 3b+
 - Raspberry Pi 4
@@ -32,7 +43,18 @@ Type the following command to download and install the updates for each out of d
 
 `sudo apt upgrade`
 
+## Configure the External Hard Drive
+Coming Soon
+
 ## Install Plex Media Server
 To enable the Plex Media Server repository on Ubuntu only a few terminal commands are required. From a terminal window run the following two commands:
 
 `echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list`
+
+`curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -`
+
+After that, it’s just a matter of running the normal `sudo apt update` and the Plex Media Server repo will be enabled on the OS.
+
+Finally, to install Plex, run the following command.
+
+`sudo apt install plexmediaserver`
