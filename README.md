@@ -24,18 +24,29 @@ Some text.
 - Raspberry Pi 4
 
 ### Storage Device
-Some text.
+You can use any storage device you choose for this project. For the purposes of this guide I will be using a 3TB Western Digital Black hard drive put into a 3.5" USB drive enclosure.
 
-## Install Raspberry Pi OS
+## PlexPi Initial Setup
+### Install Raspberry Pi OS
 Navigate to the [Raspberry Pi Software Downloads](https://www.raspberrypi.com/software/) and download the Raspberry Pi Imager. For this image we want to select a headless version of the Raspberry Pi OS. Use this tool to put the OS onto the MicroSD card. You can also frontload some settings onto the image to reduce setup time. Settings include:
 - Hostname
 - Enabling SSH
+  - You will need to ensure to enable SSH for this process
 - Username & Password
+  - Make this something secure ;)
 - Wireless Network
+  - Configure this in order for the PlexPi to connect to your wireless network
 - Timezone
 - Keyboard Layout
 
-![image](https://user-images.githubusercontent.com/12025660/187323243-6787ccbb-1a01-45c6-ad1a-974ff1ccbfe0.png)
+![image](https://user-images.githubusercontent.com/12025660/187555316-28848fad-2852-4255-aafc-a46feff24ec2.png)
+
+### Connect to the PlexPi
+Once you have installed the Raspberry Pi OS on the MicroSD card, insert the MicroSD card into the PlexPi and turn it on. During first boot, allow at least a few minutes to pass before attempting to connect.
+
+Use an SSH client to connect to the PlexPi, I prefer using [PuTTY](https://www.putty.org/).
+
+![image](https://user-images.githubusercontent.com/12025660/187557689-2e9fd138-ae85-4327-989d-40c6cf8d4ca5.png)
 
 ### Update the packages
 Type the following command to download the package information for all current sources. This is a similar concept to `git fetch`.
