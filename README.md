@@ -7,6 +7,7 @@ Some text.
 ### Useful Commands
 | Command | Description |
 | --- | --- |
+| `ls -l` | Lists the directory with details |
 | `sudo blkid` & `sudo lsblk` | Allows you to display information about available block devices, useful for getting information about your external hard drive. |
 | `sudo chown -R myuser:mygroup /path` | Change ownership recursively. |
 | `sudo mount -t auto /dev/sdb1 /path` | Mount a disk |
