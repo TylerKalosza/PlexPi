@@ -1,7 +1,7 @@
 # PlexPi
 A Raspberry Pi project for setting up a Plex server.
 
-## Getting Started
+### Getting Started
 Some text.
 
 ### Useful Commands
@@ -59,7 +59,7 @@ Type the following command to download and install the updates for each out of d
 `sudo apt upgrade`
 
 ## Configure the External Hard Drive
-Coming Soon
+For the purposed of this guide, I will be showing how to configure an external hard drive that has an existing NTFS partition.
 
 ## Install Plex Media Server
 To enable the Plex Media Server repository on Ubuntu only a few terminal commands are required. From a terminal window run the following two commands:
