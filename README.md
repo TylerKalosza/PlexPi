@@ -7,13 +7,15 @@ Some text.
 ### Useful Commands
 | Command | Description |
 | --- | --- |
-| `sudo blkid` | Allows you to display information about available block devices, useful for getting information about your external hard drive. |
+| `sudo blkid` & `sudo lsblk` | Allows you to display information about available block devices, useful for getting information about your external hard drive. |
 | `sudo chown -R myuser:mygroup /path` | Change ownership recursively. |
+| `sudo mount -t auto /dev/sdb1 /path` | Mount a disk |
 | `sudo echo "/dev/sda2 /mnt/external  errors=remount-ro 0 1" >> /etc/fstab` | Unsure about what this one is yet, but I think it's to mount the external hard drive on boot. |
 | `sudo fdisk -l` | Lists all partitions |
 | `sudo fdisk /path` | Launch fdisk for the specified path. |
 | https://phoenixnap.com/kb/delete-partition-linux | How to delete a partition in Linux. |
 | https://phoenixnap.com/kb/linux-format-disk | How to format a disk in Linux. |
+| `sudo mkfs -t ext4 /dev/sdb1` | Format a partition with the ext4 file system |
 
 ### Compatible Devices
 - Raspberry Pi 3b+
