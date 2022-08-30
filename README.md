@@ -14,6 +14,7 @@ Some text.
 | `sudo echo "/dev/sda2 /mnt/external  errors=remount-ro 0 1" >> /etc/fstab` | Unsure about what this one is yet, but I think it's to mount the external hard drive on boot. |
 | `sudo fdisk -l` | Lists all partitions |
 | `sudo fdisk /path` | Launch fdisk for the specified path. |
+| `sudo dd if=/dev/zero of=/dev/sda bs=512 count=1` | Remove a partition table. Fills the first 512 bytes of the disk with zeros, and in effect erase the partition table. |
 | https://phoenixnap.com/kb/delete-partition-linux | How to delete a partition in Linux. |
 | https://phoenixnap.com/kb/linux-format-disk | How to format a disk in Linux. |
 | `sudo mkfs -t ext4 /dev/sdb1` | Format a partition with the ext4 file system |
