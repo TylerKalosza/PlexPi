@@ -68,7 +68,7 @@ Lastly, we will change the ownership of the directory "/mnt/media". Type the com
 Success! We now have access to the external hard drive at the location /mnt/media.
 
 ## Install Plex Media Server
-To enable the Plex Media Server repository on Ubuntu only a few terminal commands are required. From a terminal window run the following two commands:
+To enable the Plex Media Server repository only a few terminal commands are required. From a terminal window run the following two commands:
 
 `echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list`
 
@@ -77,6 +77,9 @@ To enable the Plex Media Server repository on Ubuntu only a few terminal command
 After that, it’s just a matter of running the normal `sudo apt update` and the Plex Media Server repo will be enabled on the OS.
 
 Finally, to install Plex, run the command `sudo apt install plexmediaserver`.
+
+## Configure Plex Media Server
+Open a web browser and navigate to http://<ip_address>:32400/web.
 
 # Useful Commands
 | Command | Description |
