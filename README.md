@@ -87,7 +87,6 @@ Open a web browser and navigate to http://<ip_address>:32400/web.
 | `ls -l` | Lists the contents of the directory with details |
 | `sudo chown -R myuser:mygroup /path` | Change ownership recursively. |
 | `sudo mount -t auto /dev/sdb1 /path` | Mount a disk |
-| `sudo echo "/dev/sda2 /mnt/external  errors=remount-ro 0 1" >> /etc/fstab` | Unsure about what this one is yet, but I think it's to mount the external hard drive on boot. |
 | `sudo fdisk -l` | Lists all partitions |
 | `sudo fdisk /path` | Launch fdisk for the specified path. |
 | `sudo dd if=/dev/zero of=/dev/sda bs=512 count=1` | Remove a partition table. Fills the first 512 bytes of the disk with zeros, and in effect erase the partition table. |
