@@ -63,6 +63,8 @@ Next, we'll format the drive with the ext4 file system. Type the command `sudo m
 
 Next we need to mount the new disk. Create the directory where the disk will be mounted, type the command `sudo mkdir /mnt/media`. Then type the command `sudo mount -t auto /dev/sda /mnt/media` to mount the disk.
 
+Lastly, we will change the ownership of the directory "/mnt/media". Type the command `sudo chown -R pi:pi /mnt/media`.
+
 Success! We now have access to the external hard drive at the location /mnt/media.
 
 ## Install Plex Media Server
@@ -76,17 +78,6 @@ After that, it’s just a matter of running the normal `sudo apt update` and the
 
 Finally, to install Plex, run the command `sudo apt install plexmediaserver`.
 
-
-
-
-
-
-
-
-
-
-
-
 # Useful Commands
 | Command | Description |
 | --- | --- |
@@ -97,7 +88,4 @@ Finally, to install Plex, run the command `sudo apt install plexmediaserver`.
 | `sudo fdisk -l` | Lists all partitions |
 | `sudo fdisk /path` | Launch fdisk for the specified path. |
 | `sudo dd if=/dev/zero of=/dev/sda bs=512 count=1` | Remove a partition table. Fills the first 512 bytes of the disk with zeros, and in effect erase the partition table. |
-| https://phoenixnap.com/kb/delete-partition-linux | How to delete a partition in Linux. |
-| https://phoenixnap.com/kb/linux-format-disk | How to format a disk in Linux. |
 | `sudo mkfs -t ext4 /dev/sda` | Format a partition with the ext4 file system |
-
