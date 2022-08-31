@@ -63,7 +63,7 @@ Next, we'll format the drive with the ext4 file system. Type the command `sudo m
 
 Next we need to mount the new disk. Create the directory where the disk will be mounted, type the command `sudo mkdir /mnt/media`. Then type the command `sudo mount -t auto /dev/sda /mnt/media` to mount the disk.
 
-Lastly, we will change the permissions of the directory "/mnt/media". Type the command `sudo chmod 777 /mnt/media`.
+Lastly, we will change the permissions of the directory "/mnt/media". Type the command `sudo chmod 777 -R /mnt/media`.
 
 Success! We now have access to the external hard drive at the location /mnt/media.
 
