@@ -79,7 +79,7 @@ After that, it’s just a matter of running the normal `sudo apt update` and the
 Finally, to install Plex, run the command `sudo apt install plexmediaserver`.
 
 ## Configure Plex Media Server
-Open a web browser and navigate to http://<ip_address>:32400/web.
+Open a web browser and navigate to http://<ip_address_or_hostname>:32400/web.
 
 # Useful Commands
 | Command | Description |
