@@ -1,5 +1,6 @@
 select
 	mdi.title [Title],
+	mdi.title_sort [Sorting Title],
 	mdi.studio [Studio],
 	mdi.content_rating [Content Rating],
 	mdi.rating [Rating],
