@@ -37,8 +37,6 @@ Type `sudo apt update` to download the package information for all current sourc
 Type `sudo apt upgrade` to download and install the updates for each out of date package. This is a similar concept to "git pull".
 
 ### Configure the External Hard Drive
-For the purposed of this guide, I will be showing how to configure an external hard drive that has an existing NTFS partition.
-
 ***Warning: This will wipe any existing data on the external hard drive!***
 
 First we need to identify the location of the external hard drive. Start by running the command `sudo lsblk`, which will list out all of the disks and partitions. In this case, the location of the external hard drive is **/dev/sda**, and the 2 partitions on the drive are **/dev/sda1** and **/dev/sda2**.
@@ -57,6 +55,14 @@ Next we need to create a new empty GPT partition table. Type the command `sudo f
 
 ![image](https://user-images.githubusercontent.com/12025660/187567059-8e1be9a3-e580-4b1f-a8a9-8763a8bdbea5.png)
 
+Next we are going to create a new partition. Type the command `sudo fdisk /dev/sda`. Once in the fdisk utility, type `n` to create a new partition, pressing <enter> after all prompts to accept the defaults. Finally, type `w` to save and quit fdisk utility.
+
+
+# I WAS HERE
+
+
+
+
 Next, we'll format the drive with the ext4 file system. Type the command `sudo mkfs -t ext4 /dev/sda`.
 
 ![image](https://user-images.githubusercontent.com/12025660/187567561-322c676b-19eb-47ad-aa8f-0abdb2dbe4b8.png)
@@ -66,6 +72,12 @@ Next we need to mount the new disk. Create the directory where the disk will be 
 Lastly, we will change the permissions of the directory "/mnt/media". Type the command `sudo chmod 777 -R /mnt/media`.
 
 Success! We now have access to the external hard drive at the location /mnt/media.
+
+
+
+
+
+
 
 ## Install Plex Media Server
 To enable the Plex Media Server repository only a few terminal commands are required. From a terminal window run the following two commands:
@@ -86,8 +98,8 @@ Open a web browser and navigate to http://<ip_address_or_hostname>:32400/web.
 | --- | --- |
 | `ls -l` | Lists the contents of the directory with details |
 | `sudo chown -R myuser:mygroup /path` | Change ownership recursively. |
-| `sudo mount -t auto /dev/sdb1 /path` | Mount a disk |
+| `` | Mount a disk |
 | `sudo fdisk -l` | Lists all partitions |
 | `sudo fdisk /path` | Launch fdisk for the specified path. |
 | `sudo dd if=/dev/zero of=/dev/sda bs=512 count=1` | Remove a partition table. Fills the first 512 bytes of the disk with zeros, and in effect erase the partition table. |
-| `sudo mkfs -t ext4 /dev/sda` | Format a partition with the ext4 file system |
+| `sudo mkfs -t ext4 /dev/sda1` | Format a partition with the ext4 file system |
