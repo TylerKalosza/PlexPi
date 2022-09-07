@@ -63,7 +63,7 @@ Next we need to mount the new disk. Create the directory where the disk will be 
 
 Let's now change the ownership of that directory, run the command `sudo chown -R pi:pi /mnt/media`.
 
-Next need to add the disk to the **fstab** file so that the drive is mounted automatically every time the system boots. Type the command `sudo blkid` to list info about the disk. We need to copy the UUID of the drive. From here we need to edit the **fstab** file, type the command `sudo nano /etc/fstab` to edit the file in Nano. Add the following line to the file, replacing the empty GUID with the UUID of the drive.
+Next need to add the disk to the **fstab** file so that the drive is mounted automatically every time the system boots. Type the command `sudo blkid` to list info about the disk. We need to copy the UUID of the drive. From here we need to edit the **fstab** file, type the command `sudo nano /etc/fstab` to edit the file in Nano. Add the following line to the file, replacing the empty UUID with the UUID of the drive.
 
 **UUID=00000000-0000-0000-0000-000000000000 /mnt/media ext4 defaults 0 1**
 
