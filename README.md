@@ -2,7 +2,7 @@
 A Raspberry Pi project for setting up a Plex server.
 
 ### Getting Started
-Some text.
+Some text coming soon :)
 
 ### Compatible Devices
 - Raspberry Pi 3b+
