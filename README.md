@@ -101,3 +101,5 @@ Open a web browser and navigate to http://<ip_address_or_hostname>:32400/web.
 | `sudo fdisk /path` | Launch fdisk for the specified path. |
 | `sudo dd if=/dev/zero of=/dev/sda bs=512 count=1` | Remove a partition table. Fills the first 512 bytes of the disk with zeros, and in effect erase the partition table. |
 | `sudo mkfs -t ext4 /dev/sda1` | Format a partition with the ext4 file system |
+| `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf` | Edit the WiFi configuration |
+| `sudo nano /etc/ssh/sshd_config` | Change the SSH port |
