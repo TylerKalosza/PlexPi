@@ -103,3 +103,6 @@ Open a web browser and navigate to http://<ip_address_or_hostname>:32400/web.
 | `sudo mkfs -t ext4 /dev/sda1` | Format a partition with the ext4 file system |
 | `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf` | Edit the WiFi configuration |
 | `sudo nano /etc/ssh/sshd_config` | Change the SSH port |
+
+## The Plex Database
+The Plex database is a SQLite database at the following location `/docker/plex/database/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db`
