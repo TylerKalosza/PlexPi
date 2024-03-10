@@ -1,17 +1,17 @@
 select
-	mdi.title_sort [Sorting Title],
 	mdi.title [Title],
 	mdi.year [Year],
-	mdi.studio [Studio],
 	mdi.content_rating [Content Rating],
-	mdi.rating [Rating],
-	mdi.audience_rating [Audience Rating],
-	mi.width [Width],
-	mi.height [Height],
+	mdi.tags_star [Actor Tags],
 	mi.container [Container],
 	mi.video_codec [Video Codec],
 	mi.audio_codec [Audio Codec],
-	mdi.tags_star [Actor Tags]
+	mi.width [Width],
+	mi.height [Height],
+	mdi.rating [Rating],
+	mdi.audience_rating [Audience Rating],
+	mdi.studio [Studio],
+	mdi.title_sort [Sorting Title]
 from
 	media_items mi
 	inner join metadata_items mdi
